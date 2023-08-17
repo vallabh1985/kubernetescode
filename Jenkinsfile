@@ -9,7 +9,6 @@ node {
     stage('Initialize'){
         def dockerHome = tool 'myDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
-        sudo usermod -a -G docker jenkins
     }
     stage('Build image') {
   
